@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Movement.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Enemy.cs" Line="15" Column="11" />
+      <File FileName="Assets/Scripts/Boundary.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Character.cs" Line="1" Column="1" />
+      <File FileName="Assets/Coin.cs" Line="37" Column="1" />
+      <File FileName="Assets/Marker.cs" Line="1" Column="1" />
+      <File FileName="Assets/FirstPlanet.cs" Line="11" Column="5" />
+      <File FileName="Assets/Scripts/Movement.cs" Line="104" Column="102" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
