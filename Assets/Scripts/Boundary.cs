@@ -19,7 +19,6 @@ public class Boundary : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Player" || other.tag == "Enemy") {
-			Debug.Log ("boundary was hit");
 
 			other.rigidbody2D.velocity = Vector2.zero;
 

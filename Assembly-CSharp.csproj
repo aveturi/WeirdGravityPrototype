@@ -47,14 +47,30 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Coin.cs" />
-     <Compile Include="Assets\FirstPlanet.cs" />
-     <Compile Include="Assets\Marker.cs" />
      <Compile Include="Assets\Scripts\Boundary.cs" />
      <Compile Include="Assets\Scripts\Character.cs" />
-     <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\CutScene01.cs" />
+     <Compile Include="Assets\Scripts\CutScene12.cs" />
+     <Compile Include="Assets\Scripts\DeadScoreSetter.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyBase.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Level2Enemy.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Level3Enemy.cs" />
+     <Compile Include="Assets\Scripts\KillGameObjectWithDelay.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
-     <Compile Include="Assets\Scripts\Planet.cs" />
+     <Compile Include="Assets\Scripts\Planets\CutScene01Planet.cs" />
+     <Compile Include="Assets\Scripts\Planets\FirstPlanet.cs" />
+     <Compile Include="Assets\Scripts\Planets\Level2Planet.cs" />
+     <Compile Include="Assets\Scripts\Planets\Level2Planet2.cs" />
+     <Compile Include="Assets\Scripts\Planets\Level3Planet.cs" />
+     <Compile Include="Assets\Scripts\Planets\Level3Planet2.cs" />
+     <Compile Include="Assets\Scripts\Planets\Level3Planet3.cs" />
+     <Compile Include="Assets\Scripts\Planets\Planet.cs" />
+     <Compile Include="Assets\Scripts\Planets\PlanetBase.cs" />
+     <Compile Include="Assets\Scripts\ScoreObject.cs" />
      <Compile Include="Assets\Scripts\SpaceCapsule.cs" />
+     <Compile Include="Assets\Scripts\StartScreenPlanet.cs" />
+     <Compile Include="Assets\Scripts\UpArrowListener.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

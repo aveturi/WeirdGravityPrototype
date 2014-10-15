@@ -6,6 +6,8 @@ public class Character : MonoBehaviour {
 	Vector2 vel;
 	float gravityVal = -9f;
 	float xSpeed = 0.5f;
+
+	public bool invincible = false;
 	private enum XState{leftWall, rightWall, noWall};
 	private enum YState{upWall, downWall, noWall};
 
@@ -81,5 +83,10 @@ public class Character : MonoBehaviour {
 		} else if (other.name == "U" || other.name == "D") {
 			this.yState = YState.noWall;
 		}
+	}
+
+	public void Damage(){
+		if(!invincible)
+			Destroy(this.gameObject);
 	}
 }

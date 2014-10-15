@@ -5,16 +5,22 @@ public class Coin : MonoBehaviour {
 
 	public GameObject enemyPrefab;
 	public GUIText scorebox;
+	ScoreObject scoreObject;
 
-	int coinsCollected = 0;
+
+
 	// Use this for initialization
 	void Start () {
-	
+		scoreObject = GameObject.FindGameObjectWithTag ("GLOBALSCORE").GetComponent<ScoreObject> ();
+		scorebox.text = "Score : "+scoreObject.score;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void FixedUpdate () {
+		if(this.transform.localScale.x <= 10 && this.transform.localScale.y <=10)
+		this.transform.localScale = this.transform.localScale * 1.1f;
+		else
+			this.transform.localScale = this.transform.localScale * 0.9f;
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
@@ -27,15 +33,30 @@ public class Coin : MonoBehaviour {
 			float screenY = Random.Range(0.1f, 0.9f);
 			Vector2 point = cam.ViewportToWorldPoint(new Vector2(screenX,screenY));
 			this.transform.position = point;
-			coinsCollected++;
+			scoreObject.score++;
 
 			GameObject enemy = Instantiate(enemyPrefab) as GameObject;
 
-			Vector3 pos = cam.ViewportToWorldPoint(new Vector2(Random.Range(0.0f, 1.0f),Random.Range(0.0f, 1.0f)));
-			pos.z = 0;
-			enemy.transform.position = pos;
 
-			scorebox.text = "Score : "+coinsCollected;
+
+			enemy.transform.position = generateEnemyPos(cam);
+
+			scorebox.text = "Score : "+scoreObject.score;
 		}
 	}
+
+	Vector3 generateEnemyPos(Camera cam){
+
+		Vector3 pos = cam.ViewportToWorldPoint(new Vector2(Random.Range(0.0f, 1.0f),Random.Range(0.0f, 1.0f)));
+		pos.z = 0;
+		GameObject player = GameObject.FindGameObjectWithTag ("Player");
+
+		while(Vector3.Distance (player.transform.position, pos) < 1) {
+			pos = cam.ViewportToWorldPoint(new Vector2(Random.Range(0.0f, 1.0f),Random.Range(0.0f, 1.0f)));
+			pos.z = 0;
+		}
+
+		return pos;
+	}
+
 }
